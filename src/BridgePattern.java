@@ -30,5 +30,67 @@ class Sony extends TV
         remoteType.off();
     }
 }
+    
+class Philips extends TV 
+{
+    Remote remoteType;
+    Philips(Remote r) 
+    {
+        super(r);
+        this.remoteType = r;
+    }
   
+    public void on()
+    {
+        System.out.print("Philips TV ON: ");
+        remoteType.on();
+    }
+    
+    public void off()
+    {
+        System.out.print("Philips TV OFF: ");
+        remoteType.off();
+    }
+}
+
+interface Remote
+{
+    public void on();
+    public void off();
+}
+
+class OldRemote implements Remote 
+{
+    @Override
+    public void on()  
+    {
+        System.out.println("ON with Old Remote");
+    }
+
+    @Override
+    public void off() 
+    {
+        System.out.println("OFF with old Remote");
+    }
+  
+}
+
+class NewRemote implements Remote 
+{
+    @Override
+    public void on() 
+    {
+        System.out.println("ON with New Remote");
+    }
+
+    @Override
+    public void off() 
+    {
+        System.out.println("OFF with New Remote");
+    }
+}
+
+public class BridgePattern 
+{
+    
 }
