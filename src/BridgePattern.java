@@ -114,3 +114,4 @@ public class BridgePattern
         philipsNewRemote.off();  
     }
 }
+//end
